@@ -21,4 +21,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
-          cat che-plugin-registry/vscode-extensions.json
+          ls
+          cd che-plugin-registry
+          ls
+          cat vscode-extensions.json
