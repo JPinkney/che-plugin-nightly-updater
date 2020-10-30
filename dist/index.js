@@ -1446,6 +1446,10 @@ function run() {
                 const repository = ext.repository;
                 const websiteOwnerRepo = getWebsiteOwnerRepo(repository);
                 console.log(websiteOwnerRepo);
+                if (websiteOwnerRepo.website.indexOf("github") === -1) {
+                    console.log("Non github API is not currently supported");
+                    continue;
+                }
                 const tags = yield octokit.repos.listTags({
                     owner: websiteOwnerRepo.owner,
                     repo: websiteOwnerRepo.repo
