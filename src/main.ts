@@ -1,12 +1,14 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github';
 import * as fs from 'fs';
-
+import * as path from 'path';
 /**
  * Main function that is ran when the github action is started
  */
 async function run(): Promise<void> {
   try {
+
+    process.chdir(path.join('che-plugin-registry'));
 
     const vscodeExtensionsPath = "vscode-extensions.json";
     const userToken = core.getInput('token');

@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           repository: jpinkney/che-plugin-registry
+          path: che-plugin-registry
       - uses: ./
         id: che-plugin-updater
         with:
