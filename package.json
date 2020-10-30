@@ -2,7 +2,7 @@
   "name": "che-plugin-updater-action",
   "version": "1.0.0",
   "private": true,
-  "description": "Github Action to automatically update and maintain a plugin in the Che Plugin Registry",
+  "description": "Github Action to automatically update and maintains plugins in the Che Plugin Registry",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
