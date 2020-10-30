@@ -1,15 +1,11 @@
 name: 'Che Plugin Updater'
-description: 'Github Action to automatically update and maintain a plugin in the Che Plugin Registry'
+description: 'Github Action to automatically update and maintain plugins in the Che Plugin Registry'
 author: 'JPinkney'
 inputs:
-  pluginPath:
+  token:
     required: true
-    description: 'The name of the organization and the plugin in the Che Plugin Registry. E.g. redhat-developer/vscode-yaml'
-outputs:
-  version:
-    description: The new version of the plugin
-  name:
-    description: The name of the plugin
+    description: 'Your Github Token'
+outputs: {}
 runs:
   using: 'node12'
   main: 'dist/index.js'
